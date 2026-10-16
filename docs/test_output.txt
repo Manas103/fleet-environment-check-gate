@@ -1,0 +1,22 @@
+    Finished `release` profile [optimized] target(s) in 0.18s
+     Running unittests src/main.rs (target/release/deps/fleetcheck-afff1fadfccb845a)
+
+running 8 tests
+test remote::tests::build_remote_script_uses_dpkg_for_ubuntu ... ok
+test remote::tests::build_remote_script_uses_rpm_for_rhel ... ok
+test remote::tests::evaluate_all_pass_on_clean_transcript ... ok
+test remote::tests::evaluate_catches_missing_package_as_fail_not_skip ... ok
+test remote::tests::evaluate_catches_missing_port ... ok
+test remote::tests::evaluate_fails_closed_on_missing_unit_state ... ok
+test remote::tests::evaluate_catches_wrong_sysctl_value ... ok
+test remote::tests::evaluate_fails_closed_on_truncated_transcript ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/fails_closed.rs (target/release/deps/fails_closed-3eeb364ae3feec2a)
+
+running 1 test
+test ssh_to_a_closed_port_is_refused_quickly ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

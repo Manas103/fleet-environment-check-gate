@@ -1,0 +1,13 @@
+#!/usr/bin/env python3
+"""Fleet simulation stub: stands in for the real `ss -ltnH` on a simulated host, printing one
+LISTEN line per synthetic listening port, in ss's real column layout."""
+import json
+import os
+
+facts_dir = os.environ["FACTS_DIR"]
+host_id = os.environ["HOSTID"]
+with open(os.path.join(facts_dir, f"{host_id}.json")) as f:
+    facts = json.load(f)
+
+for port in facts["ports"]:
+    print(f"LISTEN 0      128          0.0.0.0:{port}        0.0.0.0:*")

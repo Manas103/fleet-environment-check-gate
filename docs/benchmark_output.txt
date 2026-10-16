@@ -1,0 +1,20 @@
+=== fleetcheck static binary ===
+/home/manas/build/fleet-environment-check-gate/target/x86_64-unknown-linux-musl/release/fleetcheck: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), static-pie linked, BuildID[sha1]=fbf065c38fc4b35bfa3cbf29463f29eaed3918a8, not stripped
+	statically linked
+
+=== clean fleet (60 hosts, expect 0/600 failing) ===
+1204
+fleetcheck: 60 hosts, 600 checks, 0 failing (report: /home/manas/build/fleet-environment-check-gate/docs/clean_report.json)
+clean run exit code: 0
+
+=== faulted fleet (60 hosts, 120 seeded misconfigurations, expect 120/600 failing) ===
+1887
+fleetcheck: 60 hosts, 600 checks, 120 failing (report: /home/manas/build/fleet-environment-check-gate/docs/faulted_report.json)
+faulted run exit code: 1
+
+=== cross-check: detected failures vs. the seeded fault manifest ===
+seeded faults: 120
+detected fails: 120
+missed (seeded but not caught): 0
+false positives (caught but not seeded): 0
+stopped 1887
